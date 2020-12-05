@@ -817,8 +817,11 @@
     <ClInclude Include="tribus\cuda_echo512_aes.cuh">
       <Filter>Source Files\CUDA\tribus</Filter>
     </ClInclude>
-    <CudaCompile Include="x11\sib.cu">
-      <Filter>Source Files\CUDA\x11</Filter>
+    <CudaCompile Include="x12\x12.cu">
+      <Filter>Source Files\CUDA\x12</Filter>
+    </CudaCompile>
+    <CudaCompile Include="curvehash\curvehash.cu">
+      <Filter>Source Files\CUDA\curvehash</Filter>
     </CudaCompile>
     <CudaCompile Include="x11\cuda_streebog.cu">
       <Filter>Source Files\CUDA\x11</Filter>

@@ -281,6 +281,7 @@ extern int scanhash_bmw(int thr_id, struct work* work, uint32_t max_nonce, unsig
 extern int scanhash_c11(int thr_id, struct work* work, uint32_t max_nonce, unsigned long *hashes_done);
 extern int scanhash_cryptolight(int thr_id, struct work* work, uint32_t max_nonce, unsigned long *hashes_done, int variant);
 extern int scanhash_cryptonight(int thr_id, struct work* work, uint32_t max_nonce, unsigned long *hashes_done, int variant);
+extern int scanhash_curvehash(int thr_id, struct work* work, uint32_t max_nonce, unsigned long *hashes_done);
 extern int scanhash_decred(int thr_id, struct work* work, uint32_t max_nonce, unsigned long *hashes_done);
 extern int scanhash_deep(int thr_id, struct work* work, uint32_t max_nonce, unsigned long *hashes_done);
 extern int scanhash_equihash(int thr_id, struct work* work, uint32_t max_nonce, unsigned long *hashes_done);
@@ -350,6 +351,7 @@ extern void free_bmw(int thr_id);
 extern void free_c11(int thr_id);
 extern void free_cryptolight(int thr_id);
 extern void free_cryptonight(int thr_id);
+extern void free_curvehash(int thr_id);
 extern void free_decred(int thr_id);
 extern void free_deep(int thr_id);
 extern void free_equihash(int thr_id);
@@ -904,6 +906,7 @@ void cryptolight_hash_variant(void* output, const void* input, int len, int vari
 void cryptolight_hash(void* output, const void* input);
 void cryptonight_hash_variant(void* output, const void* input, size_t len, int variant);
 void cryptonight_hash(void* output, const void* input);
+void curvehash(void *output, const void *input);
 void monero_hash(void* output, const void* input);
 void stellite_hash(void* output, const void* input);
 void decred_hash(void *state, const void *input);

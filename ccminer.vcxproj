@@ -571,6 +571,7 @@
     <CudaCompile Include="x11\cuda_streebog.cu" />
     <CudaCompile Include="x11\cuda_streebog_maxwell.cu" />
     <CudaCompile Include="x11\c11.cu" />
+    <CudaCompile Include="curvehash\curvehash.cu" />
     <CudaCompile Include="x11\fresh.cu" />
     <CudaCompile Include="x11\sib.cu" />
     <CudaCompile Include="x11\s3.cu" />

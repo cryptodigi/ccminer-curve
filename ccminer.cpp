@@ -248,6 +248,7 @@ Options:\n\
 			bmw         BMW 256\n\
 			cryptolight AEON cryptonight (MEM/2)\n\
 			cryptonight XMR cryptonight v1 (old)\n\
+			curvehash	Curvehash\n\
 			c11/flax    X11 variant\n\
 			decred      Decred Blake256\n\
 			deep        Deepcoin\n\
@@ -2302,6 +2303,9 @@ static void *miner_thread(void *userdata)
 			case ALGO_VELTOR:
 				minmax = 0x80000;
 				break;
+			case ALGO_CURVEHASH,
+				minmax=0x20000,
+				break;	
 			case ALGO_CRYPTOLIGHT:
 			case ALGO_CRYPTONIGHT:
 			case ALGO_SCRYPT_JANE:
@@ -2541,6 +2545,9 @@ static void *miner_thread(void *userdata)
 			break;
 		case ALGO_X11:
 			rc = scanhash_x11(thr_id, &work, max_nonce, &hashes_done);
+			break;
+		case ALGO_CURVEHASH:
+			rc = scanhash_x12(thr_id, &work, max_nonce, &hashes_done);
 			break;
 		case ALGO_X12:
 			rc = scanhash_x12(thr_id, &work, max_nonce, &hashes_done);
